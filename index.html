@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+<head>
+<meta charset='UTF-8'>
+<title>Estatísticas da Mega Sena</title>
+<style>
+body {font-family: Arial, sans-serif;}
+.sidebar {width: 200px; position: fixed; height: 100%; background-color: #f1f1f1; padding: 20px 10px;}
+.main {margin-left: 200px; padding: 20px;}
+nav a {display: block; padding: 10px; text-decoration: none; background-color: #f1f1f1;}
+nav a:hover {background-color: #ddd;}
+iframe {width: 100%; height: 800px; border: none;}
+</style>
+<script>
+function carregarPagina(url) {
+  document.getElementById('iframe').src = url;
+}
+</script>
+</head>
+<body>
+<div class='sidebar'>
+<h1>Estatisticas da Mega Sena</h1>
+<nav>
+<a href='javascript:void(0)' onclick="carregarPagina('dezenas_mais_sorteadas.html')">dezenas mais sorteadas</a>
+<a href='javascript:void(0)' onclick="carregarPagina('dezenas_menos_sorteadas.html')">dezenas menos sorteadas</a>
+<a href='javascript:void(0)' onclick="carregarPagina('dezenas_nao_sorteadas_ha_mais_tempo.html')">dezenas nao sorteadas ha mais tempo</a>
+<a href='javascript:void(0)' onclick="carregarPagina('combinacoes_4_mais_repetidas.html')">combinacoes 4 mais repetidas</a>
+<a href='javascript:void(0)' onclick="carregarPagina('combinacoes_5_mais_repetidas.html')">combinacoes 5 mais repetidas</a>
+<a href='javascript:void(0)' onclick="carregarPagina('combinacoes_6_mais_repetidas.html')">combinacoes 6 mais repetidas</a>
+<a href='javascript:void(0)' onclick="carregarPagina('pares_impares.html')">pares impares</a>
+<a href='javascript:void(0)' onclick="carregarPagina('soma_numeros_mais_sorteados.html')">soma numeros mais sorteados</a>
+</nav>
+</div>
+<div class='main'>
+<iframe id='iframe' src=''></iframe>
+</div>
+</body>
+</html>
